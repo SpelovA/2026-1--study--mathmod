@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Спелов А. Н.">
+  <title>Доклад</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <script type="text/javascript" nonce="39f54d60cbce41159c9d45bfde5" src="//local.adguard.org?ts=1773920724564&amp;type=content-script&amp;dmn=s32nrg.storage.yandex.net&amp;url=https%3A%2F%2Fs32nrg.storage.yandex.net%2Frdisk%2F5e291060b77495414db4f8e1ecb877a4e054c24a95b21e148acc14b8f79e59ca%2F69bc1e86%2FfKqInKw3d7bLFOeFnMGnhMuaVZJ9xHsyX5Fr5SxyGRUlBfMLaXO0CC09CJWbwKO4I5bwd7Dq8VE5A8CH7nhEqAJB9Ie6YAREBeT3Rjvohvir8npumZHI4midPdWhecNq%3Fuid%3D1130000066283036%26filename%3Dpresentation.html%26disposition%3Dattachment%26hash%3D%26limit%3D0%26content_type%3Dtext%252Fhtml%26owner_uid%3D1130000066283036%26fsize%3D21554%26hid%3D2355a22fce6356e66a682a4c193b4f17%26media_type%3Ddevelopment%26tknv%3Dv3%26etag%3D975126aabb389b823ccccbbf19a8f970%26ts%3D64d62b8c02d80%26s%3D0be5b7de2457b55bb318d09a4485d8505c26e781e3efd8ec5c5e1d03fa33b438%26pb%3DU2FsdGVkX18boqBVMFJn6BAi7ifKRgFLkC0F55pFOOzMSx7fR_l23ZfBemFwNOCXBLGLOebCVeblZkbXjbvKr25D7lzBlKjwG1cOzBYK6zYoMTKssTJP_fVmw6UpHg8n&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="39f54d60cbce41159c9d45bfde5" src="//local.adguard.org?ts=1773920724564&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freset%2Ecss" rel="stylesheet">
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ecss" rel="stylesheet">
+  <style>
+.reveal .sourceCode { 
+overflow: visible;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Ftheme%2Fbeige%2Ecss" rel="stylesheet" id="theme">
+  
+  
+  
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Доклад</h1>
+  <p class="subtitle">Модель заражения SIS</p>
+  <p class="author">Спелов А. Н.</p>
+  <p class="institute">Российский университет дружбы народов, Москва,
+Россия</p>
+  <p class="date">15 марта 2026</p>
+</section>
+
+<section>
+<section id="информация" class="title-slide slide level1">
+<h1>Информация</h1>
+
+</section>
+<section id="докладчик" class="slide level2">
+<h2>Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Спелов Андрей Николаевич</li>
+<li>НПИбд-02-23 Студ. билет: 1132231839</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132231839@pfur.ru">1132231839@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+</section></section>
+<section>
+<section id="основная-часть" class="title-slide slide level1">
+<h1>Основная часть</h1>
+
+</section>
+<section id="что-такое-модель-sis" class="slide level2">
+<h2>Что такое модель SIS</h2>
+<ul>
+<li>Модель SIS относится к классу компартментальных моделей в
+эпидемиологии. Она описывает распространение инфекционных заболеваний,
+при которых переболевшие не приобретают иммунитет и снова становятся
+восприимчивыми к заражению. Название модели происходит от двух
+состояний, в которых может находиться человек: Susceptible
+(восприимчивый) и Infected (инфицированный). Это простейшая модель,
+позволяющая понять базовые механизмы распространения инфекций.</li>
+</ul>
+</section>
+<section id="почему-эта-модель-важна" class="slide level2">
+<h2>Почему эта модель важна</h2>
+<ul>
+<li>Модель SIS актуальна для описания многих реальных заболеваний, таких
+как обычная простуда, грипп, некоторые бактериальные инфекции и
+венерические заболевания. Понимание этой модели необходимо для
+прогнозирования развития эпидемий, оценки необходимых ресурсов
+здравоохранения и разработки мер борьбы с инфекциями. Математическое
+моделирование позволяет ответить на вопрос: перерастет ли вспышка в
+эпидемию или затухнет сама собой.</li>
+</ul>
+</section>
+<section id="основные-допущения-модели" class="slide level2">
+<h2>Основные допущения модели</h2>
+<ul>
+<li>При построении модели SIS принимается ряд упрощающих предположений.
+Популяция считается замкнутой, то есть никто не въезжает и не выезжает.
+Общая численность населения остается постоянной. Предполагается, что
+люди контактируют друг с другом случайным образом, то есть любой
+восприимчивый может встретиться с любым зараженным. Также считается, что
+выздоровление наступает мгновенно после окончания болезни, и иммунитет
+не формируется совсем.</li>
+</ul>
+</section>
+<section id="два-состояния-системы" class="slide level2">
+<h2>Два состояния системы</h2>
+<ul>
+<li>В модели SIS каждый человек в любой момент времени находится ровно в
+одном из двух состояний. Восприимчивые — это здоровые люди, которые
+могут заразиться при контакте с больным. Инфицированные — это больные
+люди, которые заразны и могут передавать инфекцию окружающим.
+Выздоровев, человек не остается защищенным, а сразу возвращается в
+группу восприимчивых и может заболеть снова. Этот цикл может повторяться
+бесконечно.</li>
+</ul>
+</section>
+<section id="как-происходит-заражение" class="slide level2">
+<h2>Как происходит заражение</h2>
+<ul>
+<li>Процесс распространения инфекции в модели SIS выглядит следующим
+образом. Когда восприимчивый человек контактирует с инфицированным, с
+определенной вероятностью происходит заражение. Чем больше больных
+вокруг, тем выше шанс заболеть. Зараженный человек какое-то время болеет
+и заражает других, а затем выздоравливает. После выздоровления он снова
+становится восприимчивым, и весь цикл повторяется заново. Так инфекция
+может циркулировать в популяции неограниченно долго.</li>
+</ul>
+</section>
+<section id="ключевые-параметры-модели" class="slide level2">
+<h2>Ключевые параметры модели</h2>
+<ul>
+<li>Для описания динамики заболевания используются два основных
+параметра. Первый параметр характеризует скорость передачи инфекции, то
+есть насколько легко и быстро заражаются люди при контактах с больными.
+Второй параметр описывает скорость выздоровления, то есть как быстро
+люди перестают болеть. Величина, обратная скорости выздоровления, равна
+средней продолжительности болезни. Например, если люди болеют в среднем
+пять дней, то скорость выздоровления равна одной пятой в день.</li>
+</ul>
+</section>
+<section id="что-такое-репродуктивное-число" class="slide level2">
+<h2>Что такое репродуктивное число</h2>
+<ul>
+<li>Самым важным показателем в модели SIS является базовое
+репродуктивное число. Оно показывает, сколько человек в среднем заразит
+один больной за все время своей болезни, если все остальные люди
+восприимчивы. Если это число больше единицы, каждый больной заражает
+больше одного человека, и эпидемия разрастается. Если число меньше
+единицы, каждый больной заражает меньше одного человека, и эпидемия
+затухает. Это пороговое значение определяет судьбу инфекции.</li>
+</ul>
+</section>
+<section id="что-происходит-при-низкой-заразности" class="slide level2">
+<h2>Что происходит при низкой заразности</h2>
+<ul>
+<li>Если репродуктивное число меньше единицы, ситуация благополучна.
+Каждый новый больной не успевает заразить хотя бы одного здорового до
+своего выздоровления. Цепочка заражений обрывается. Даже если инфекцию
+завезти извне, она не сможет распространиться и через некоторое время
+исчезнет полностью. Популяция остается здоровой. Это режим затухания
+эпидемии, к которому стремятся все меры профилактики и контроля.</li>
+</ul>
+</section>
+<section id="что-происходит-при-высокой-заразности" class="slide level2">
+<h2>Что происходит при высокой заразности</h2>
+<ul>
+<li>Если репродуктивное число больше единицы, ситуация меняется
+кардинально. Каждый больной успевает заразить больше одного человека до
+того, как выздоровеет. Число зараженных начинает расти. Однако рост не
+может продолжаться бесконечно, потому что количество восприимчивых людей
+ограничено. Постепенно в популяции устанавливается равновесие: число
+вновь заражающихся становится равно числу выздоравливающих. Инфекция не
+исчезает, а переходит в хроническую, эндемическую форму и циркулирует
+постоянно.</li>
+</ul>
+</section>
+<section id="эндемическое-состояние" class="slide level2">
+<h2>Эндемическое состояние</h2>
+<ul>
+<li>Когда инфекция переходит в эндемическую форму, в популяции
+устанавливается постоянный уровень заболеваемости. Часть населения
+всегда болеет, часть временно здорова. Этот равновесный уровень зависит
+от того, насколько заразна инфекция. Чем выше репродуктивное число, тем
+больше людей болеет одновременно. Например, если репродуктивное число
+равно двум, в равновесии будет болеть половина населения. Если
+репродуктивное число равно трем, болеть будет две трети населения.</li>
+</ul>
+</section>
+<section id="пример-из-жизни" class="slide level2">
+<h2>Пример из жизни</h2>
+<ul>
+<li>Рассмотрим для примера студенческое общежитие, где проживает пятьсот
+человек. Если продолжительность болезни составляет пять дней, а
+заразность такова, что один больной заражает двух здоровых, то инфекция
+перейдет в хроническую форму. В равновесии постоянно будет болеть около
+трехсот человек, то есть шестьдесят процентов жителей. Это означает, что
+инфекция никогда не исчезнет полностью, а будет постоянно циркулировать,
+вызывая стабильно высокий уровень заболеваемости.</li>
+</ul>
+</section>
+<section id="как-бороться-с-инфекцией" class="slide level2">
+<h2>Как бороться с инфекцией</h2>
+<ul>
+<li>Модель SIS показывает, что единственный способ полностью искоренить
+инфекцию — снизить репродуктивное число ниже единицы. Этого можно
+добиться разными способами. Вакцинация уменьшает количество
+восприимчивых людей. Карантин и социальная дистанция снижают количество
+контактов между людьми. Средства индивидуальной защиты уменьшают
+вероятность заражения при контакте. Эффективное лечение сокращает
+продолжительность болезни. Все эти меры направлены на то, чтобы
+разорвать цепочку заражений.</li>
+</ul>
+</section>
+<section id="заключение" class="slide level2">
+<h2>Заключение</h2>
+<ul>
+<li>Модель заражения SIS является фундаментальным инструментом
+математической эпидемиологии. Несмотря на свою простоту, она
+демонстрирует ключевое свойство эпидемических процессов — существование
+порога распространения инфекции. Если заразность ниже порога, эпидемия
+затухает сама собой. Если выше порога, инфекция переходит в хроническую
+форму и остается в популяции навсегда. Понимание этого механизма
+необходимо для разработки эффективных стратегий борьбы с инфекционными
+заболеваниями и принятия обоснованных решений в области общественного
+здравоохранения.</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ejs"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fnotes%2Fnotes%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fsearch%2Fsearch%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fzoom%2Fzoom%2Ejs"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
